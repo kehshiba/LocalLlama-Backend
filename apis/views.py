@@ -46,7 +46,7 @@ def upload_audio(request):
 
 
 def save_log(request):
-    json_file_path = os.path.abspath('/Users/abhishekab/PycharmProjects/LLMBackend/static/output.json')
+    json_file_path = os.path.abspath('./static/output.json')
     try:
         with open(json_file_path, 'r') as f:
             existing_data = json.load(f)
@@ -66,8 +66,8 @@ def save_log(request):
 
 
 def callprogram(request, output):
-    file_path = os.path.abspath('/Users/abhishekab/PycharmProjects/LLMBackend/static/file')
-    json_file_path = os.path.abspath('/Users/abhishekab/PycharmProjects/LLMBackend/static/output.json')
+    file_path = os.path.abspath('./static/file')
+    json_file_path = os.path.abspath('./static/output.json')
 
     cmd = [file_path, output]
 
